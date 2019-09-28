@@ -1,0 +1,31 @@
+
+<div >
+<a class="btn btn-success mt-3" href='#!/'>لیست کاربران</a>
+<form ng-submit='adduser()'>
+    <div class="form-group mt-3">
+        <label class="mr-3">
+            Name:
+            <input class="form-control mt-3" type="text" ng-model="firstName" ng-model-options="{ updateOn: 'blur' }" />
+        </label>
+        <label class="mr-3">
+            Family:
+            <input class="form-control mt-3" type="text" ng-model="lastName" ng-model-options="{ updateOn: 'blur' }" />
+        </label>
+        <label class="mr-3">
+            Email:
+            <input class="form-control mt-3" type="text" ng-model="email" ng-model-options="{ updateOn: 'blur' }" />
+        </label>
+        <label class="mr-3">
+            Mobile:
+            <input class="form-control mt-3" type="text" ng-model="mobile" />
+        </label>
+        <button type="submit"  class="btn btn-success" >افزودن</button>
+        <!--
+        <input class='btn primery-btn' type="button" og-click='' value="Enter"/>    
+        -->
+    </div>
+    <div>{{firstName}}</div>
+    <div>{{lastName}}</div>
+    <div>{{email}}</div>
+    <div>{{mobile}}</div><br/><br/>
+</form></div>

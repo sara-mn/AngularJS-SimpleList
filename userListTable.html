@@ -1,0 +1,42 @@
+<div>
+  <a class="btn btn-success mt-3" href='#!/add'>افزودن کاربر جدید</a>
+<div class='mt-3'>Total Users : {{count}}</div>  
+<table class='table mt-3'>
+    <thead>
+        <tr>
+        <th></th>
+        <th ng-click="chooseOrderBy('firstName')">firstName</th>
+        <th ng-click="chooseOrderBy('lastName')">lastName</th>
+        <th>email</th>
+        <th>mobile</th>
+        <th></th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="k in users | orderBy:choosenCol">
+        <td>
+          <input class="form-control" type="text" ng-model="k.id" ng-model-options="{ updateOn: 'blur' }" /></label>
+        </td>
+        <td>
+          <input class="form-control" type="text" ng-model="k.firstName" ng-model-options="{ updateOn: 'blur' }" /></label>
+        </td>
+        <td>
+          <input class="form-control" type="text" ng-model="k.lastName" ng-model-options="{ updateOn: 'blur' }" /></label>
+        </td>
+        <td>
+          <input class="form-control" type="text" ng-model="k.email" ng-model-options="{ updateOn: 'blur' }" /></label>
+        </td>
+        <td>
+          <input class="form-control" type="text" ng-model="k.mobile" ng-model-options="{ updateOn: 'blur' }" /></label>
+        </td>
+        <td>    
+          <button type="button" class="btn btn-danger" ng-click='deleteuser(k)'>Delete</button>
+        </td>
+        <td>   
+          <a type="button" class="btn btn-warning" href='#!/edit/{{k.id}}'>Edit</a>
+        </td>
+        </tr>
+    </tbody>
+</table>
+</div>

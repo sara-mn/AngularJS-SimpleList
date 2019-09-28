@@ -1,0 +1,24 @@
+
+<a class="btn btn-success mt-3" href='#!/'>لیست کاربران</a>
+<form ng-submit='edituser()'>
+    <div class="form-group mt-3">
+        <label class="mr-3">
+            Name:
+            <input class="form-control mt-3" type="text" ng-model="thisUser.firstName" ng-model-options="{ updateOn: 'blur' }" />
+        </label>
+        <label class="mr-3">
+            Family:
+            <input class="form-control mt-3" type="text" ng-model="thisUser.lastName" ng-model-options="{ updateOn: 'blur' }" />
+        </label>
+        <label class="mr-3">
+            Email:
+            <input class="form-control mt-3" type="text" ng-model="thisUser.email" ng-model-options="{ updateOn: 'blur' }" />
+        </label>
+        <label class="mr-3">
+            Mobile:
+            <input class="form-control mt-3" type="text" ng-model="thisUser.mobile" />
+        </label>
+        <button type="submit"  class="btn btn-success" >ویرایش</button>
+       
+    </div>
+</form>
